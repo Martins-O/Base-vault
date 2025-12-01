@@ -1,48 +1,66 @@
-# BaseVault
+## Foundry
 
-Cross-Chain DeFi Yield Optimizer with AI-Powered Risk Management on Base
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-## Overview
+Foundry consists of:
 
-BaseVault is a sophisticated DeFi protocol built on Base that automatically optimizes yield across multiple DEXs while providing AI-powered risk management and social trading features.
+- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Features
+## Documentation
 
-- **Intelligent Yield Aggregation**: Auto-routes funds across Base DEXs (Aerodrome, Uniswap V3)
-- **Cross-Chain Integration**: Bridge assets between Base, Ethereum, Optimism, and Arbitrum
-- **AI Risk Scoring**: Chainlink Functions-powered risk assessment
-- **Social Trading**: Copy top performers and earn rewards via Talent Protocol
-- **Privacy Options**: ZK-proof enabled anonymous yield farming
+https://book.getfoundry.sh/
 
-## Tech Stack
+## Usage
 
-- **Smart Contracts**: Foundry (Solidity ^0.8.20)
-- **Frontend**: Next.js 14 with App Router
-- **Oracles**: Chainlink Functions & Price Feeds
-- **Bridges**: LayerZero
-- **Testing**: Foundry (unit, integration, fork tests)
+### Build
 
-## Project Status
-
-🚧 **Under Active Development** - Talent Protocol Base Challenge Entry
-
-## Getting Started
-
-```bash
-# Install Foundry
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
-
-# Install dependencies
-forge install
-
-# Run tests
-forge test
-
-# Deploy to Base Sepolia
-forge script script/Deploy.s.sol --rpc-url base-sepolia --broadcast
+```shell
+$ forge build
 ```
 
-## License
+### Test
 
-MIT
+```shell
+$ forge test
+```
+
+### Format
+
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
