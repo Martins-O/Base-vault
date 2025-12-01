@@ -1,0 +1,34 @@
+# Foundry
+cache/
+out/
+broadcast/
+.env
+
+# Dependencies
+lib/
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+lcov.info
+
+# Gas reports
+.gas-snapshot
+
+# Deployment artifacts
+deployments/
+artifacts/
