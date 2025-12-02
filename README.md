@@ -1,66 +1,76 @@
-## Foundry
+# BaseVault
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Cross-Chain DeFi Yield Optimizer with AI-Powered Risk Management on Base
 
-Foundry consists of:
+## Overview
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+BaseVault is a sophisticated DeFi protocol built on Base that automatically optimizes yield across multiple DEXs while providing AI-powered risk management and social trading features.
 
-## Documentation
+## Features
 
-https://book.getfoundry.sh/
+- **Intelligent Yield Aggregation**: Auto-routes funds across Base DEXs (Aerodrome, Uniswap V3)
+- **Cross-Chain Integration**: Bridge assets between Base, Ethereum, Optimism, and Arbitrum
+- **AI Risk Scoring**: Chainlink Functions-powered risk assessment
+- **Social Trading**: Copy top performers and earn rewards via Talent Protocol
+- **Privacy Options**: ZK-proof enabled anonymous yield farming
 
-## Usage
+## Tech Stack
 
-### Build
+- **Smart Contracts**: Foundry (Solidity ^0.8.20)
+- **Frontend**: Next.js 14 with App Router
+- **Oracles**: Chainlink Functions & Price Feeds
+- **Bridges**: LayerZero
+- **Testing**: Foundry (unit, integration, fork tests)
 
-```shell
-$ forge build
+## Project Status
+
+🚧 **Under Active Development** - Talent Protocol Base Challenge Entry
+
+## Contract Architecture
+
+```
+BaseVault/
+├── src/
+│   ├── core/           # Core vault contracts
+│   ├── strategies/     # Yield strategies (Aerodrome, Uniswap)
+│   ├── bridges/        # Cross-chain adapters
+│   ├── risk/          # AI risk management
+│   └── social/        # Copy trading & rewards
 ```
 
-### Test
+## Getting Started
 
-```shell
-$ forge test
+```bash
+# Install Foundry
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
+
+# Install dependencies
+forge install
+
+# Run tests
+forge test
+
+# Deploy to Base Sepolia
+forge script script/Deploy.s.sol --rpc-url base-sepolia --broadcast
 ```
 
-### Format
+## Deployed Contracts
 
-```shell
-$ forge fmt
-```
+### Base Sepolia Testnet
+- BaseVault: TBD
+- VaultFactory: TBD
 
-### Gas Snapshots
+## Development Progress
 
-```shell
-$ forge snapshot
-```
+- [x] Project initialization
+- [x] Core vault implementation (ERC4626)
+- [x] Strategy system architecture
+- [ ] DEX integrations
+- [ ] Cross-chain bridges
+- [ ] AI risk scoring
+- [ ] Social trading features
 
-### Anvil
+## License
 
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+MIT
