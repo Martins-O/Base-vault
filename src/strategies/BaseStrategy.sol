@@ -23,7 +23,11 @@ abstract contract BaseStrategy is IStrategy {
 
     function balanceOf() public view virtual override returns (uint256);
     function harvest() external virtual override returns (uint256 profit, uint256 loss);
-    function withdraw(uint256 amount) external virtual override onlyVault returns (uint256);
+    function withdraw(uint256 amount) external virtual override returns (uint256);
     function estimatedTotalAssets() external view virtual override returns (uint256);
     function estimatedAPY() external view virtual override returns (uint256);
+
+    function _checkVault() internal view {
+        if (msg.sender != vault) revert InvalidVault();
+    }
 }
