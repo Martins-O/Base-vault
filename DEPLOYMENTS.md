@@ -4,9 +4,9 @@
 
 ### December 30, 2025
 
-| Contract | Address | Transaction | Deployment Date |
-|----------|---------|-------------|-----------------|
-| BaseVault (USDC) | [`0x221b7cca1c385c6c81e17b086c753328af41aaaa`](https://sepolia.basescan.org/address/0x221b7cca1c385c6c81e17b086c753328af41aaaa) | [View on BaseScan](https://sepolia.basescan.org/address/0x221b7cca1c385c6c81e17b086c753328af41aaaa) | Dec 30, 2025 |
+| Contract | Address | Status | Deployment Date |
+|----------|---------|--------|-----------------|
+| BaseVault (USDC) | [`0x221b7cca1c385c6c81e17b086c753328af41aaaa`](https://sepolia.basescan.org/address/0x221b7cca1c385c6c81e17b086c753328af41aaaa) | ✅ **Verified** | Dec 30, 2025 |
 
 ## Deployment Parameters
 
@@ -18,13 +18,18 @@
 
 ## Verification
 
-To verify the contract on BaseScan:
+✅ **Contract Verified on BaseScan**
+
+The BaseVault contract source code is verified and publicly viewable on BaseScan:
+https://sepolia.basescan.org/address/0x221b7cca1c385c6c81e17b086c753328af41aaaa#code
+
+To verify additional contracts, use:
 ```bash
 forge verify-contract \
-  0x221b7cca1c385c6c81e17b086c753328af41aaaa \
-  src/core/BaseVault.sol:BaseVault \
+  <CONTRACT_ADDRESS> \
+  src/<path>/<Contract>.sol:<ContractName> \
   --chain-id 84532 \
-  --constructor-args $(cast abi-encode "constructor(address,string,string)" 0x036CbD53842c5426634e7929541eC2318f3dCF7e "BaseVault USDC" "bvUSDC") \
+  --constructor-args $(cast abi-encode "constructor(...)" <args>) \
   --etherscan-api-key $BASESCAN_API_KEY
 ```
 
@@ -46,7 +51,7 @@ cast call 0x221b7cca1c385c6c81e17b086c753328af41aaaa "governance()" --rpc-url ht
 This deployment is part of the **Talent Protocol Base Challenge** (December 1-8, 2025).
 
 - **GitHub**: https://github.com/Martins-O/Base-vault
-- **Total Commits**: 169 (Dec 1-8, 2025)
+- **Total Commits**: 171+ (Dec 1-8, 2025)
 - **On-Chain Deployments**: See above
 
 ## Future Deployments
