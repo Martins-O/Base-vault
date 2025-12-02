@@ -58,18 +58,25 @@ forge script script/Deploy.s.sol --rpc-url base-sepolia --broadcast
 ## Deployed Contracts
 
 ### Base Sepolia Testnet
-- BaseVault: TBD
-- VaultFactory: TBD
+- **BaseVault (USDC)**: [`0x221b7cca1c385c6c81e17b086c753328af41aaaa`](https://sepolia.basescan.org/address/0x221b7cca1c385c6c81e17b086c753328af41aaaa)
+- VaultFactory: Coming soon
+- Strategies: Coming soon
+
+See [DEPLOYMENTS.md](./DEPLOYMENTS.md) for full deployment details.
 
 ## Development Progress
 
 - [x] Project initialization
 - [x] Core vault implementation (ERC4626)
 - [x] Strategy system architecture
-- [ ] DEX integrations
-- [ ] Cross-chain bridges
-- [ ] AI risk scoring
-- [ ] Social trading features
+- [x] Deployed to Base Sepolia testnet
+- [x] VaultFactory contract
+- [x] Strategy contracts (Uniswap V3, Aerodrome)
+- [x] Bridge adapters (LayerZero)
+- [x] Risk management contracts
+- [ ] Contract verification on BaseScan
+- [ ] Frontend deployment
+- [ ] Mainnet deployment
 
 ## License
 
