@@ -58,7 +58,7 @@ forge script script/Deploy.s.sol --rpc-url base-sepolia --broadcast
 ## Deployed Contracts
 
 ### Base Sepolia Testnet
-- **BaseVault (USDC)**: [`0x221b7cca1c385c6c81e17b086c753328af41aaaa`](https://sepolia.basescan.org/address/0x221b7cca1c385c6c81e17b086c753328af41aaaa)
+- **BaseVault (USDC)**: [`0x221b7cca1c385c6c81e17b086c753328af41aaaa`](https://sepolia.basescan.org/address/0x221b7cca1c385c6c81e17b086c753328af41aaaa) ✅ **Verified**
 - VaultFactory: Coming soon
 - Strategies: Coming soon
 
@@ -74,7 +74,7 @@ See [DEPLOYMENTS.md](./DEPLOYMENTS.md) for full deployment details.
 - [x] Strategy contracts (Uniswap V3, Aerodrome)
 - [x] Bridge adapters (LayerZero)
 - [x] Risk management contracts
-- [ ] Contract verification on BaseScan
+- [x] Contract verification on BaseScan ✅
 - [ ] Frontend deployment
 - [ ] Mainnet deployment
 
