@@ -32,3 +32,8 @@ lcov.info
 # Deployment artifacts
 deployments/
 artifacts/
+
+# Generate commits script
+generate_commits.sh
+generate_all_commits.sh
+complete_commits.sh
