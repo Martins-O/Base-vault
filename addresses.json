@@ -1,0 +1,12 @@
+{
+  "base-sepolia": {
+    "FeeCollector": "TBD",
+    "InteractiveVault": "TBD",
+    "VaultFactory": "TBD"
+  },
+  "base-mainnet": {
+    "FeeCollector": "TBD",
+    "InteractiveVault": "TBD",
+    "VaultFactory": "TBD"
+  }
+}
