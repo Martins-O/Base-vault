@@ -1,0 +1,23 @@
+# Production Deployment Checklist
+
+## Pre-Deployment
+- [ ] All tests passing
+- [ ] Test coverage > 95%
+- [ ] Gas optimization complete
+- [ ] Security audit completed
+- [ ] Multi-sig wallet ready
+- [ ] Documentation complete
+
+## Deployment
+- [ ] Deploy FeeCollector
+- [ ] Deploy vaults
+- [ ] Deploy strategies
+- [ ] Configure access control
+- [ ] Verify contracts
+- [ ] Test with small amounts
+
+## Post-Deployment
+- [ ] Monitor for 48 hours
+- [ ] Gradual TVL ramp
+- [ ] Community announcement
+- [ ] Bug bounty launch
