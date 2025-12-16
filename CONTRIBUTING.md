@@ -1,50 +1,29 @@
 # Contributing to BaseVault
 
-Thank you for your interest in contributing to BaseVault!
-
 ## Development Setup
 
-```bash
-# Clone the repository
-git clone git@github.com:Martins-O/Base-vault.git
-cd BaseVault
+1. Install Foundry
+2. Clone repository
+3. Run `forge install`
+4. Copy `.env.example` to `.env`
 
-# Install dependencies
-forge install
+## Making Changes
 
-# Run tests
-forge test
-```
+1. Create feature branch
+2. Write tests for new features
+3. Ensure all tests pass
+4. Update documentation
+5. Submit pull request
 
 ## Code Style
 
 - Follow Solidity style guide
-- Use meaningful variable and function names
-- Add NatSpec comments for all public functions
-- Keep functions focused and modular
+- Use descriptive variable names
+- Add NatSpec comments
+- Keep functions small and focused
 
 ## Testing Requirements
 
-- Write unit tests for all new features
-- Ensure >95% code coverage
-- Include integration tests for cross-contract interactions
-- Add fork tests for DEX integrations
-
-## Pull Request Process
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes with descriptive messages
-4. Push to your fork
-5. Open a Pull Request
-
-## Security
-
-- Never commit private keys or sensitive data
-- Follow checks-effects-interactions pattern
-- Use reentrancy guards where applicable
-- Report security vulnerabilities privately
-
-## License
-
-By contributing, you agree that your contributions will be licensed under the MIT License.
+- Minimum 95% test coverage
+- All tests must pass
+- Gas benchmarks within acceptable range
