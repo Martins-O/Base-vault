@@ -24,13 +24,13 @@ contract VerifyDeploymentsScript is Script {
 
         // Verify constructor parameters
         if (feeCollector.code.length > 0) {
-            console.log("\n✅ FeeCollector deployed successfully");
+            console.log("\n[OK] FeeCollector deployed successfully");
         }
         if (vault.code.length > 0) {
-            console.log("✅ Vault deployed successfully");
+            console.log("[OK] Vault deployed successfully");
         }
         if (factory.code.length > 0) {
-            console.log("✅ Factory deployed successfully");
+            console.log("[OK] Factory deployed successfully");
         }
     }
 }
