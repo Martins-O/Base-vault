@@ -10,25 +10,32 @@ contract DeployStrategiesScript is Script {
     
     function run() external {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        address vault = vm.envAddress("VAULT_ADDRESS");
-        address feeCollector = vm.envAddress("FEE_COLLECTOR_ADDRESS");
         
+        address feeCollector = 0xCd5De20043a8aE46D80a22678b0Eb8B1078829Ce;
+        address vault = 0x24ed030F7F62E05Eb5842bF5197c87a82397BDAC;
+
+        console.log("Deploying Strategies...");
+
         vm.startBroadcast(deployerPrivateKey);
-        
-        AerodromeStrategyWithFees aero = new AerodromeStrategyWithFees(
+
+        // Deploy Aerodrome Strategy
+        AerodromeStrategyWithFees aeroStrategy = new AerodromeStrategyWithFees(
             vault,
             USDC_BASE_SEPOLIA,
             feeCollector
         );
-        console.log("Aerodrome Strategy:", address(aero));
-        
-        UniswapV3StrategyWithFees uni = new UniswapV3StrategyWithFees(
+        console.log("AerodromeStrategy deployed:", address(aeroStrategy));
+        console.log("  Performance Fee: 10%");
+
+        // Deploy Uniswap V3 Strategy
+        UniswapV3StrategyWithFees uniStrategy = new UniswapV3StrategyWithFees(
             vault,
             USDC_BASE_SEPOLIA,
             feeCollector
         );
-        console.log("Uniswap V3 Strategy:", address(uni));
-        
+        console.log("UniswapV3Strategy deployed:", address(uniStrategy));
+        console.log("  Performance Fee: 8%");
+
         vm.stopBroadcast();
     }
 }
