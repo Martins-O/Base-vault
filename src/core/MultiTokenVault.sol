@@ -77,9 +77,10 @@ contract MultiTokenVault is BaseVault {
 
         IERC20(asset).safeTransferFrom(msg.sender, address(this), amount);
 
-        if (fee > 0) {
-            IERC20(asset).safeTransfer(feeCollector, fee);
-        }
+        // Fee stays in vault (can be collected separately)
+        // if (fee > 0) {
+        //     IERC20(asset).safeTransfer(feeCollector, fee);
+        // }
 
         // Convert to primary asset equivalent for share calculation
         shares = netAmount; // Simplified - in production use oracle
