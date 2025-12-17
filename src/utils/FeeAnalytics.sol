@@ -90,20 +90,20 @@ contract FeeAnalytics {
         avgFees = n > 0 ? totalFees / n : 0;
     }
 
-    function calculateFeeGrowthRate(address vault, uint256 days)
+    function calculateFeeGrowthRate(address vault, uint256 numDays)
         external
         view
         returns (uint256 growthRate)
     {
-        if (days < 2) return 0;
+        if (numDays < 2) return 0;
 
         uint256 today = block.timestamp / 1 days;
         uint256 recentFees = dailyStats[vault][today].totalFees;
-        uint256 oldFees = dailyStats[vault][today - days].totalFees;
+        uint256 oldFees = dailyStats[vault][today - numDays].totalFees;
 
         if (oldFees == 0) return 0;
 
         // Growth rate in basis points
-        growthRate = ((recentFees - oldFees) * 10000) / oldFees / days;
+        growthRate = ((recentFees - oldFees) * 10000) / oldFees / numDays;
     }
 }
