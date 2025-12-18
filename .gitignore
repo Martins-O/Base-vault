@@ -48,3 +48,4 @@ generate_dec12.sh
 generate_dec13.sh
 generate_dec14_15_16.sh
 
+.temp_contracts/
