@@ -47,5 +47,15 @@ generate_dec11.sh
 generate_dec12.sh
 generate_dec13.sh
 generate_dec14_15_16.sh
+commit_dec17_18.sh
 
 .temp_contracts/
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.vercel
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
