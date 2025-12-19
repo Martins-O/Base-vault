@@ -5,7 +5,7 @@ broadcast/
 .env
 
 # Dependencies
-lib/
+/lib/
 node_modules/
 
 # IDE
