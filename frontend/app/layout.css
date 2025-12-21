@@ -1,0 +1,12 @@
+@media (max-width: 640px) {
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-menu {
+    display: none;
+  }
+}
