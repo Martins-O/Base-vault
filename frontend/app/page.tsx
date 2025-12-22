@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ConnectButton } from "@/components/ConnectButton";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
               BaseVault
             </h1>
-            <div className="flex gap-4">
+            <div className="flex items-center gap-4">
               <Link
                 href="/dashboard"
                 className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
@@ -22,6 +23,7 @@ export default function Home() {
               >
                 Vaults
               </Link>
+              <ConnectButton />
             </div>
           </div>
         </div>
