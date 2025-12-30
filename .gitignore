@@ -32,8 +32,19 @@ lcov.info
 # Deployment artifacts
 deployments/
 artifacts/
+DEPLOYMENT_PLAN.md
+DEPLOYMENTS.md
+THANK_YOU.md
 
 # Generate commits script
 generate_commits.sh
 generate_all_commits.sh
 complete_commits.sh
+complete_dec9_16.sh
+generate_dec9_16.sh
+generate_dec10_16_all.sh
+generate_dec11.sh
+generate_dec12.sh
+generate_dec13.sh
+generate_dec14_15_16.sh
+
